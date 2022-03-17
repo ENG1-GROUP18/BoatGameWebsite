@@ -4,7 +4,7 @@ $(document).ready(() => {
 
 
 let render_projects = (slug) => {
-    let projects_area = $('.projects-wrapper');
+    let projects_area = $('.projects-wrapper25');
 
     $('.white-button').removeClass('white-button-hover');
     $(`#${slug}`).addClass('white-button-hover');
@@ -43,20 +43,88 @@ let render_projects = (slug) => {
   
     ]
 
-    let projects = [];
-    if(slug == 'all') {
-        projects = projects_obj.map(project_mapper);
-    } 
-    else {
-        projects = projects_obj.filter(project => project.categories.includes(slug)).map(project_mapper);
-    }
-    projects_area.hide().html(projects).fadeIn();
+
+
+    let projects_area2 = $('.projects-wrapper18');
+
+    //TODO add images and files
+    let projects_obj2 = [
+            {
+                image: 'assets/images/req.png',
+                link: 'assets/files/Req1.pdf',
+                title: 'Requirements:TODO',
+                categories: ['featured']
+            },
+            {
+                image: 'assets/images/arc.png',
+                link: 'assets/files/Arch1.pdf',
+                title: 'Architecture:TODO',
+                categories: ['featured']
+            },
+            {
+                image: 'assets/images/msp.png',
+                link: 'assets/files/Plan1.pdf',
+                title: 'Method selection and planning:TODO',
+                categories: ['featured']
+            },
+            {
+                image: 'assets/images/ram.png',
+                link: 'assets/files/Risk1.pdf',
+                title: 'Risk assessment and mitigation: TODO',
+                categories: ['featured']
+            },
+            {
+                image: 'assets/images/imp.png',
+                link: 'assets/files/Impl1.pdf',
+                title: 'Implementation: Team 25',
+                categories: ['featured']
+            },
+            {
+                image: 'assets/images/boat.png',
+                link: 'assets/files/Impl1.pdf',
+                title: 'Change Report',
+                categories: ['featured']
+            },
+            {
+                image: 'assets/images/boat.png',
+                link: 'assets/files/Impl1.pdf',
+                title: 'Implementation: Team 18',
+                categories: ['featured']
+            },
+            {
+                image: 'assets/images/boat.png',
+                link: 'assets/files/Impl1.pdf',
+                title: 'Software Testing Report',
+                categories: ['featured']
+            },
+            {
+                image: 'assets/images/boat.png',
+                link: 'assets/files/Impl1.pdf',
+                title: 'Continuous Integration Report',
+                categories: ['featured']
+            },
+
+        ]
+
+        let projects = [];
+        let projects2 = [];
+        if(slug == 'all') {
+            projects = projects_obj.map(project_mapper);
+            projects2 = projects_obj2.map(project_mapper);
+        }
+        else {
+            projects = projects_obj.filter(project => project.categories.includes(slug)).map(project_mapper);
+            projects2 = projects_obj2.filter(project => project.categories.includes(slug)).map(project_mapper);
+        }
+        projects_area.hide().html(projects).fadeIn();
+        projects_area2.hide().html(projects2).fadeIn();
+
 }
 
 let project_mapper = project => {
     return `
         <div class="wrapper">
-                
+
             <div class="card radius shadowDepth1">
 
                 ${project.image ? 
