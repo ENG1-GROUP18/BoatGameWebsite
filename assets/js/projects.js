@@ -76,29 +76,39 @@ let render_projects = (slug) => {
             {
                 image: 'assets/images/imp.png',
                 link: 'assets/files/Impl1.pdf',
-                title: 'Implementation: Team 25',
+                title: 'Implementation: TODO',
                 categories: ['featured']
             },
             {
-                image: 'assets/images/boat.png',
+                categories: ['featured']
+            },
+            {
+                title: 'Team 18 deliverables:',
+                categories: ['featured']
+            },
+            {
+                categories: ['featured']
+            },
+            {
+                image: 'assets/images/change report.png',
                 link: 'assets/files/Impl1.pdf',
                 title: 'Change Report',
                 categories: ['featured']
             },
             {
-                image: 'assets/images/boat.png',
+                image: 'assets/images/Implementation.png',
                 link: 'assets/files/Impl1.pdf',
-                title: 'Implementation: Team 18',
+                title: 'Implementation',
                 categories: ['featured']
             },
             {
-                image: 'assets/images/boat.png',
+                image: 'assets/images/Software Testing report.png',
                 link: 'assets/files/Impl1.pdf',
                 title: 'Software Testing Report',
                 categories: ['featured']
             },
             {
-                image: 'assets/images/boat.png',
+                image: 'assets/images/CI report.png',
                 link: 'assets/files/Impl1.pdf',
                 title: 'Continuous Integration Report',
                 categories: ['featured']
@@ -122,29 +132,38 @@ let render_projects = (slug) => {
 }
 
 let project_mapper = project => {
-    return `
-        <div class="wrapper">
-
-            <div class="card radius shadowDepth1">
-
-                ${project.image ? 
-                    `<div class="card__image border-tlr-radius">
-                        <a href="${project.link}">
-                            <img src="${project.image}" alt="image" id="project-image" class="border-tlr-radius">
-                        </a>
-                    </div>`           
-                : ''}
-
+    if (project.image == undefined){
+        if (project.title == undefined){
+            return `<div> </div>`
+        }else{
+            return`<h1> Team 25 Deliverables: </h1>`
+        }
         
-                <div class="card__content card__padding">
-        
-                    <article class="card__article">
-                        <h2><a href="${project.link}">${project.title}</a></h2>
-                            </article>
+    }else{
+        return `
+            <div class="wrapper">
+
+                <div class="card radius shadowDepth1">
+
+                    ${project.image ? 
+                        `<div class="card__image border-tlr-radius">
+                            <a href="${project.link}">
+                                <img src="${project.image}" alt="image" id="project-image" class="border-tlr-radius">
+                            </a>
+                        </div>`           
+                    : ''}
+
+            
+                    <div class="card__content card__padding">
+            
+                        <article class="card__article">
+                            <h2><a href="${project.link}">${project.title}</a></h2>
+                                </article>
+                    </div>
                 </div>
             </div>
-        </div>
-    `
+        `
+    }
 }
 
 let selected = (slug) => {
