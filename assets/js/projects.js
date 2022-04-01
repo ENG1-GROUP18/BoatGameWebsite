@@ -90,25 +90,25 @@ let render_projects = (slug) => {
                 categories: ['featured']
             },
             {
-                image: 'assets/images/change report.png',
+                image: 'assets/images/change report.PNG',
                 link: 'assets/files/Impl1.pdf',
                 title: 'Change Report',
                 categories: ['featured']
             },
             {
-                image: 'assets/images/Implementation.png',
+                image: 'assets/images/Implementation.PNG',
                 link: 'assets/files/Impl1.pdf',
                 title: 'Implementation',
                 categories: ['featured']
             },
             {
-                image: 'assets/images/Software Testing report.png',
+                image: 'assets/images/Software Testing report.PNG',
                 link: 'assets/files/Impl1.pdf',
                 title: 'Software Testing Report',
                 categories: ['featured']
             },
             {
-                image: 'assets/images/CI report.png',
+                image: 'assets/images/CI report.PNG',
                 link: 'assets/files/Impl1.pdf',
                 title: 'Continuous Integration Report',
                 categories: ['featured']
