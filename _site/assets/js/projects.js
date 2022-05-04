@@ -82,19 +82,19 @@ let render_projects = (slug) => {
             },
             {
                 image: 'assets/images/change report.PNG',
-                link: 'assets/files/Impl1.pdf',
+                link: 'assets/files/ChangeReport.pdf',
                 title: 'Change Report',
                 categories: ['featured']
             },
             {
                 image: 'assets/images/Implementation.PNG',
-                link: 'assets/files/Impl1.pdf',
+                link: 'assets/files/Nothing.pdf',
                 title: 'Implementation',
                 categories: ['featured']
             },
             {
                 image: 'assets/images/Software Testing report.PNG',
-                link: 'assets/files/Impl1.pdf',
+                link: 'assets/files/TestingReport.pdf',
                 title: 'Software Testing Report',
                 categories: ['featured']
             },
