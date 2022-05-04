@@ -88,7 +88,7 @@ let render_projects = (slug) => {
             },
             {
                 image: 'assets/images/Implementation.PNG',
-                link: 'assets/files/Nothing.pdf',
+                link: 'assets/files/NewImpl.pdf',
                 title: 'Implementation',
                 categories: ['featured']
             },
