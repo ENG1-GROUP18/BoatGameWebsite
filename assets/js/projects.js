@@ -109,7 +109,7 @@ let render_projects = (slug) => {
             },
             {
                 image: 'assets/images/CI report.PNG',
-                link: 'assets/files/Impl1.pdf',
+                link: 'assets/files/CI.pdf',
                 title: 'Continuous Integration Report',
                 categories: ['featured']
             },
@@ -136,7 +136,7 @@ let project_mapper = project => {
         if (project.title == undefined){
             return `<div> </div>`
         }else{
-            return`<h1> Team 25 Deliverables: </h1>`
+            return`<h1> Team 18 Deliverables: </h1>`
         }
         
     }else{
